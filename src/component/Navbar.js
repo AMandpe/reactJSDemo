@@ -2,6 +2,8 @@ import React from 'react'
 import { Link, NavLink, withRouter } from 'react-router-dom'
 
 const Navbar = (props) => {
+  console.log('Navbar', props)
+
 // withRouter it is a higher order component
   // setTimeout(() => {
   //   props.history.push('/about') // it is called programmatic redirect
@@ -16,6 +18,7 @@ const Navbar = (props) => {
           <li><NavLink to='/contact'>Contact</NavLink></li>
           <li><NavLink to='/useOfAxios'>useOfAxios</NavLink></li>
         </ul>
+        { props.location.pathname }
       </div>
     </nav>
   )
